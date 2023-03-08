@@ -9,6 +9,7 @@ import userRegisterRouter from './routes/user/register.route';
 import userPasswordRouter from './routes/user/password.route';
 import userDeleteRouter from './routes/user/delete.route';
 import userGetRouter from './routes/user/user.route';
+import userGetAllRouter from './routes/user/users.route';
 
 const app = express();
 app.use(express.json());
@@ -17,6 +18,7 @@ app.use(userGetRouter);
 app.use(userRegisterRouter);
 app.use(userPasswordRouter);
 app.use(userDeleteRouter);
+app.use(userGetAllRouter);
 
 app.listen(8080, async () => {
     console.log('Listening on port 8080');
